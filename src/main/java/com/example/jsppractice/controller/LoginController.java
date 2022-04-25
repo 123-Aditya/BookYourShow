@@ -26,6 +26,12 @@ public class LoginController {
 	{
 		return "registerUser";
 	}
+	@RequestMapping(value="/showinput",method=RequestMethod.GET)
+	public String showInput()
+	{
+		return "showinput";
+	}
+
 	
 	@RequestMapping(value="/loginAdmin",method=RequestMethod.POST)
 	public String loginAdmin(ModelMap model, @RequestParam String inputId, @RequestParam String password)

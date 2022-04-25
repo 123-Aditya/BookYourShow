@@ -19,7 +19,7 @@ public class AdminController {
 		return "movieAdmin";
 	}
 	
-	@RequestMapping(value="/admin/show",method=RequestMethod.GET)
+	@RequestMapping(value="/admin/show/lo",method=RequestMethod.GET)
 	public String showDetails()
 	{
 		return "showAdmin";

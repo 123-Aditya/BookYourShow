@@ -1,4 +1,5 @@
 package com.example.jsppractice.controller;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,24 +10,26 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.jsppractice.model.Shows;
-import com.example.jsppractice.repository.ShowRepository;
+
+import com.example.jsppractice.model.User;
+import com.example.jsppractice.repository.UsersRepository;
 
 @RestController
-public class ShowsResource {
+public class UserResource {
 
     @Autowired
-    ShowRepository showsRepository;
+    UsersRepository usersRepository;
 
-    @GetMapping(value = "/allshows")
-    public List<Shows> getAll() {
-        return showsRepository.findAll();
+    @GetMapping(value = "/allUsers")
+    public List<User> getAllUser() {
+        return usersRepository.findAll();
     }
 
-    @PostMapping(value = "/insertshow")
-    public List<Shows> persist(@RequestBody final Shows shows) {
-        showsRepository.save(shows);
-        return showsRepository.findAll();
+    @PostMapping(value = "/loadUsers")
+    public List<User> persist(@RequestBody final User user) {
+        usersRepository.save(user);
+        return usersRepository.findAll();
     }
+    
 
 }

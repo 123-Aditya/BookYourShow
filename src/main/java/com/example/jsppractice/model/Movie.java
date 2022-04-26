@@ -21,28 +21,28 @@ public class Movie {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Integer getIDnumber() {
+	public Integer getMoiveID() {
 		return movieID;
 	}
-	public void setIDnumber(Integer movieID) {
+	public void setMoiveID(Integer movieID) {
 		this.movieID = movieID;
 	}
-	public String getMovie() {
+	public String getMovieName() {
 		return movieName;
 	}
-	public void setMovie(String movieName) {
+	public void setMovieName(String movieName) {
 		this.movieName = movieName;
 	}
 	public String getLanguages() {
 		return languages;
 	}
 	public void setLanguages(String languages) {
-		languages = languages;
+		this.languages = languages;
 	}
 	public Integer getDuration() {
 		return duration;
 	}
-	public void setDuration(Integer Duration) {
+	public void setDuration(Integer duration) {
 		this.duration = duration;
 	}
 	
